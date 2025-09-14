@@ -55,7 +55,28 @@ Here are the evaluation results of **Senti** on the GoEmotions validation set:
 
 ## 🚀 Quickstart
 
+#### Inference
+
+There are multiple ways to use this model in Huggingface Transformers. Possibly the simplest is using a pipeline:
+
 ### 1. Install dependencies
+
 ```bash
 pip install torch transformers
+```
+
+
+```python
+from transformers import pipeline
+classifier = pipeline(task="text-classification", model="AR04/Senti", top_k=None)
+sentences = ["hi! u r looki beautiful today dear"]
+model_outputs = classifier(sentences)
+print(model_outputs[0])
+# produces a list of dicts for each of the labels
+```
+Output:
+```bash
+[{'label': 'admiration', 'score': 0.9517803192138672}, {'label': 'love', 'score': 0.18317067623138428}, {'label': 'joy', 'score': 0.03131399303674698}, {'label': 'neutral', 'score': 0.01567094214260578}, {'label': 'surprise', 'score': 0.009232419542968273}, {'label': 'approval', 'score': 0.007308646105229855}, {'label': 'excitement', 'score': 0.006345656234771013}, {'label': 'pride', 'score': 0.004945244640111923}, {'label': 'caring', 'score': 0.0038624939043074846}, {'label': 'realization', 'score': 0.0023580112028867006}, {'label': 'desire', 'score': 0.0017759536858648062}, {'label': 'optimism', 'score': 0.0013220690889284015}, {'label': 'sadness', 'score': 0.001188945840112865}, {'label': 'disappointment', 'score': 0.0009136834414675832}, {'label': 'gratitude', 'score': 0.0008250900427810848}, {'label': 'relief', 'score': 0.0005154621903784573}, {'label': 'amusement', 'score': 0.0004376845608931035}, {'label': 'fear', 'score': 0.00038696840056218207}, {'label': 'embarrassment', 'score': 0.0003084330528508872}, {'label': 'grief', 'score': 0.00019462488126009703}, {'label': 'confusion', 'score': 0.00018893269589170814}, {'label': 'annoyance', 'score': 0.0001587819424457848}, {'label': 'curiosity', 'score': 0.0001355114800389856}, {'label': 'remorse', 'score': 0.00011744408402591944}, {'label': 'anger', 'score': 0.00010586195276118815}, {'label': 'disgust', 'score': 9.386352030560374e-05}, {'label': 'nervousness', 'score': 7.547048153355718e-05}, {'label': 'disapproval', 'score': 3.7117086321813986e-05}]
+```
+
 
