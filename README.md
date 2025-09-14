@@ -14,6 +14,19 @@ It uses **MobileBERT**, making it small and efficient enough to run on **low-pow
 
 ---
 
+## 🧪 Evaluation
+
+Here are the evaluation results of **Senti** on the GoEmotions validation set:
+
+| Metric       | Value |
+|--------------|-------|
+| Loss         | 0.085 |
+| F1-score     | 0.586 |
+| ROC AUC      | 0.752 |
+| Accuracy     | 0.460 |
+
+---
+
 ## 📊 Dataset
 
 - **Source:** [Google GoEmotions](https://github.com/google-research/google-research/tree/master/goemotions)  
