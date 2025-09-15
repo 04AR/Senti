@@ -73,7 +73,7 @@ pip install torch transformers
 ```python
 from transformers import pipeline
 classifier = pipeline(task="text-classification", model="AR04/Senti", top_k=None)
-sentences = ["hi! u r looki beautiful today dear"]
+sentences = ["hi! you  are looking beautiful today dear"]
 model_outputs = classifier(sentences)
 print(model_outputs[0])
 # produces a list of dicts for each of the labels
