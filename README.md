@@ -5,7 +5,7 @@
   <a href=https://github.com/04AR/Senti target="_blank"><img src=https://img.shields.io/badge/Code-black.svg?logo=github height=22px></a>
   <a href=https://huggingface.co/AR04/Senti target="_blank"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20Models-d96902.svg height=22px></a>
   <a href=https://github.com/04AR/Senti/blob/main/Senti.ipynb target="_blank"><img src="https://img.shields.io/badge/Training%20Code-%20jupyter-orange"></a>
-  
+  <a href=https://huggingface.co/spaces/AR04/SentiDemo target="_blank"><img src="https://img.shields.io/badge/Demo-%20HuggingFaceDemo-orange"></a>  
 </div>
 
 **Senti** is a lightweight emotion classification model fine-tuned on the [Google GoEmotions](https://github.com/google-research/google-research/tree/master/goemotions) dataset.  
